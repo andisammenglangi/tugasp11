@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kalkulator</title>
+</head>
+<body>
+    <h1>Kalkulator PENJUMLAHAN dan PENGURANGAN</h1>
+
+    <form id="perangkat">
+            <input type="number" id="angka1" placeholder="Masukkan Angka Pertama">
+            <input type="number" id="angka2" placeholder="Masukkan Angka Kedua">
+            <div id="button">
+                <button id="tambah" type="button">+</button>
+                <button id="kurang" type="button">-</button>
+            </div>
+            <label>Hasil :</label><p id="hasil"></p>
+            <button id="reset">Bersihkan</button>
+    </form>
+    <script>
+        document.getElementById("tambah").addEventListener("click", function() {
+            var nilai1 = parseFloat(document.getElementById("angka1").value);
+            var nilai2 = parseFloat(document.getElementById("angka2").value);
+            var tambah = nilai1 + nilai2;
+            document.getElementById("hasil").textContent = tambah;
+        });
+
+        document.getElementById("kurang").addEventListener("click", function() {
+            var nilai1 = parseFloat(document.getElementById("angka1").value);
+            var nilai2 = parseFloat(document.getElementById("angka2").value);
+            var tambah = nilai1 - nilai2;
+            document.getElementById("hasil").textContent = tambah;
+        });
+
+        document.getElementById("reset").addEventListener("click", function(){
+            document.getElementById("angka1").value = "";
+            document.getElementById("angka2").value = "";
+            document.getElementById("hasil").textContent = "";
+        });
+    </script>
+
+</body>
+</html>
